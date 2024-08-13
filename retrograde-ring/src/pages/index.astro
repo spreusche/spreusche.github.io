@@ -1,5 +1,8 @@
 ---
 import Badge from '../components/Badge.astro';
+import SocialPill from '../components/SocialPill.astro';
+import LinkedInIcon from '../components/icons/LinkedInIcon.astro';
+import MailIcon from '../components/icons/MailIcon.astro';
 import Layout from '../layouts/Layout.astro';
 ---
 
@@ -19,6 +22,16 @@ import Layout from '../layouts/Layout.astro';
 			<h2 class="text-white text-2xl opacity-80 flex justify-center flex-row py-2">
 				With a hands-on experience in the field, I am excited to contribute with all my skills and knowledge to overcome any challenges ahead!
 			</h2>
+			<nav class="flex flex-wrap gap-4 mt-8">
+				<SocialPill href="mailto:santipreusche@gmail.com">
+					<MailIcon class="size-4" />
+					santipreusche@gmail.com
+				</SocialPill>
+				<SocialPill href="https://www.linkedin.com/in/santiagopreusche">
+					<LinkedInIcon class="size-4" />
+					LinkedIn
+				</SocialPill>
+			</nav>
 			
 		</section>
 	</main>
