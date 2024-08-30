@@ -1,0 +1,45 @@
+---
+const personalImageAlt = "Santiago Preusche";
+import ProfileCheck from "../components/icons/ProfileCheck.astro";
+
+---
+
+<article
+    class="flex flex-col items-center justify-center gap-8 text-gray-700 dark:text-gray-300 md:flex-row"
+>
+    <div
+        class="[&>p]:mb-4 [&>p>strong]:text-yellow-500 dark:[&>p>strong]:text-yellow-100 [&>p>strong]:font-normal [&>p>strong]:font-mono text-pretty order-2 md:order-1"
+    >
+        <p>
+            I am Santiago Preusche, a <strong>Software Engineer</strong> from Argentina currently living in 
+            <strong>Vienna, Austria</strong>. I graduated mid 2024 with both a <strong>bachelor's degree and a Master's degree</strong>
+            in software engineering as I got the opportunity to join a double-degree program.
+        </p>
+
+        <p>
+            These last years brought many new challenges to my life: I moved out from my home, even from my country,
+            to a completely different one, with a different culture where not even the language is the same. I also got my first job,
+            and other events that taught me many lessons on the<strong> importance of knowing how to face a new challenge. 
+            And that only by working hard on your objectives is how you achieve success.</strong>
+        </p>
+
+        <p>
+            Going a bit into my passions and interests, I love solving problems and challenging myself.
+            Always open to learn and interested in web and mobile development (mostly backend), videogames/entertainment, 
+            security, and technologies in general.
+        </p>
+
+        
+    </div>
+
+    <img
+        width="200"
+        height="200"
+        src="/public/AboutMe.webp"
+        alt={personalImageAlt}
+        class="order-1 object-cover w-64 h-full p-1 md:order-2 rotate-3 lg:p-2 lg:w-64 aspect-square rounded-2xl bg-black/20 dark:bg-yellow-500/5 ring-1 ring-black/70 dark:ring-white/20"
+        style="object-position: 50% 50%"
+    />
+</article>
+
+

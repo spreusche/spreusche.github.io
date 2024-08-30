@@ -1,0 +1,24 @@
+---
+import ExperienceItem from "./ExperienceItem.astro"
+
+    const EXPERIENCE = [
+    {
+    date: "September 2023",
+    title: "Android Development Internship",
+    company: "Runtastic GmbH (adidas)",
+    link: "https://www.runtastic.com/",
+    description:
+        "Joined the android development team to give support and develop features for the Adidas running app. Worked both on the Running and the Adidas apps",
+    },
+    ]
+    ---
+
+    <ol class="relative mt-16">
+    {
+    EXPERIENCE.map((experience) => (
+        <li class="">
+        <ExperienceItem {...experience} />
+        </li>
+    ))
+    }
+    </ol>

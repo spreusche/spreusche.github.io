@@ -1,0 +1,227 @@
+---
+import GitHub from "./icons/GithubIcon.astro";
+import Link from "./icons/Link.astro";
+import LinkButton from "./LinkButton.astro";
+
+const TAGS = {
+    JAVA: {
+        name: "Java",
+        class: "bg-[#6F4E37] text-white",
+        
+    },
+    TAILWIND: {
+        name: "Tailwind CSS",
+        class: "bg-[#003159] text-white",   
+    },
+    SPRING: {
+        name: "Spring",
+        class: "bg-[#206833] text-white",
+    },
+    POSTGRESQL: {
+        name: "PostgreSQL",
+        class: "bg-[#003159] text-white",
+    },
+    ANGULAR: {
+        name: "Angular",
+        class: "bg-red-800 text-white",    
+    },
+    TYPESCRIPT: {
+        name: "Typescript",
+        class: "bg-cyan-600 text-white",    
+    },
+    ANDROID: {
+        name: "Android",
+        class: "bg-[#266f1d] text-white",    
+    },
+    FIREBASE: {
+        name: "Firebase",
+        class: "bg-orange-700 text-white",    
+    },
+    C: {
+        name: "C",
+        class: "bg-[#003159] text-white",   
+    },
+    PYTHON: {
+        name: "Python",
+        class: "bg-[#306998] text-white",    
+    },
+    YACC: {
+        name: "YACC",
+        class: "bg-[#003159] text-white",    
+    },
+    LEX: {
+        name: "LEX",
+        class: "bg-[#003159] text-white",
+    },
+    ASM: {
+        name: "Assembler",
+        class: "bg-blue-950 text-white",
+    },
+    FASTAPI: {
+        name: "FastAPI",
+        class: "bg-teal-600 text-white",
+    },
+    NEO4J: {
+        name: "Neo4J",
+        class: "bg-[#003159] text-white",
+    },
+    MOODLE: {
+        name: "moodle",
+        class: "bg-amber-500 text-white",
+    },
+    JSON: {
+        name: "json",
+        class: "bg-[#003159] text-white",
+    },
+    VUE: {
+        name: "Vue",
+        class: "bg-emerald-600 text-white",    
+    },
+    XML: {
+        name: "XML",
+        class: "bg-[#003159] text-white",    
+    },
+    YAML:{
+        name:"YAML",
+        class:"bg-amber-500 text-white"
+    }
+    
+};
+const PROJECTS = [
+    {
+        title: "JobHunters - Job Searching WebApp",
+        description:
+            "Single Page Application for users to find jobs and companies to publish new positions. Developed a REST API with Java, Spring. PostgreSQL for database and Angular with Typescript.",
+        link: "",
+        github: "",
+        image: "/JobHunters2.webp",
+        tags: [TAGS.JAVA, TAGS.SPRING, TAGS.ANGULAR, TAGS.TYPESCRIPT, TAGS.POSTGRESQL], //TAGS.JAVA, TAGS.TAILWIND
+    },
+    {
+        title: "Hands-on AI Systems",
+        description:
+            "Compilation of AI models and algorithms. Simple and multilayered perceptrons. Neural networks. Deep learning autoencoder.",
+        link: "",
+        github: "https://github.com/spreusche/SIA-TPs",
+        image: "neuron.webp",
+        tags: [TAGS.PYTHON], //TAGS.JAVA, TAGS.TAILWIND
+    },
+    {
+        title: "MascotApp - App for Pet Caring",
+        description:
+            "Android app developed with Java and Firebase for people to take care of their pets.",
+        github: "https://github.com/spreusche/MascotApp",
+        image: "/Mascotapp.webp",
+        tags: [TAGS.ANDROID, TAGS.JAVA, TAGS.FIREBASE],
+    },
+    {
+        title: "Social Events Website",
+        description:
+            "Developed an API in Python using FastAPI that handles information in Neo4J and PostgreSQL databases. The information was displayed in a simple SPA made with Vue",
+        link: "",
+        github: "",
+        image: "Social.webp",
+        tags: [TAGS.PYTHON, TAGS.FASTAPI, TAGS.POSTGRESQL, TAGS.NEO4J, TAGS.VUE], //TAGS.JAVA, TAGS.TAILWIND
+    },
+    {
+        title: "CourseAsCode",
+        description:
+            "Text-based tool written Python for teachers to create Moodle learning courses in an easier way. Designed for a better version control support and improving usability",
+        link: "",
+        github: "https://github.com/spreusche/CourseAsCode",
+        image: "/Thesis.webp",
+        tags: [TAGS.PYTHON, TAGS.MOODLE, TAGS.JSON, TAGS.YAML, TAGS.XML], //TAGS.JAVA, TAGS.TAILWIND
+    },
+    {
+        title: "Steganography encoder/decoder",
+        description:
+            "A program capable of encoding and decoding files inside bmp images",
+        link: "",
+        github: "https://github.com/spreusche/criptografia-esteganografia",
+        image: "/stegano.webp",
+        tags: [TAGS.JAVA], 
+    },
+    {
+        title: "Operating System",
+        description:
+            "Written in C and Assembler. Two memory allocators were implemented (free_list and buddy), the scheduler, a semaphore and pipes system, a shell to run commands, and different processes to test the system.",
+        link: "",
+        github: "https://github.com/spreusche/TP2-SO",
+        image: "OS.webp",
+        tags: [TAGS.C, TAGS.ASM], //TAGS.JAVA, TAGS.TAILWIND
+    },
+    {
+        title: "SOCKS5 Proxy Server",
+        description:
+            "SOCKSv5 Proxy Server developed in C supporting concurrent connections, authentication methods, IPv4, IPv6 and FQDN requests, metrics and logging mechanisms, POP3 protocol, among other features.",
+        link: "",
+        github: "https://github.com/spreusche/pdc-tpe-socksv5",
+        image: "socks5.webp",
+        tags: [TAGS.C], //TAGS.JAVA, TAGS.TAILWIND
+    },
+    {
+        title: "Training App",
+        description:
+            "Android app for people to train and make excercise at home. Follow training plans and learn new excercises.",
+        link: "",
+        github: "",
+        image: "qfit.webp",
+        tags: [TAGS.ANDROID, TAGS.JAVA], //TAGS.JAVA, TAGS.TAILWIND
+    },
+    
+];
+---
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-12 w-full hover:w-full">
+    {
+        PROJECTS.map(({ image, title, description, tags, link, github }) => (
+        
+            <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0 w-full">
+                    <div class="relative w-full s:w-1/2">
+                        <div class=" flex flex-col size-17 items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
+                            <img
+                                alt="Project"
+                                class="object-scale-down object-top size-17 transition duration-500 sm:h-1/2 md:scale-120 md:group-hover:scale-105"
+                                loading="lazy"
+                                src={image}
+                                
+                            />
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-800 dark:text-gray-100">
+                            {title}
+                        </h3>
+                        <div class="flex flex-wrap mt-2">
+                            <ul class="flex flex-wrap flex-row mb-2 gap-x-2 gap-y-2">
+                                {tags.map((tag) => (
+                                    <li>
+                                        <span
+                                            class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 w-full`}
+                                        >
+                                            
+                                            {tag.name}
+                                        </span>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+                        <div class="mt-2 text-gray-700 dark:text-gray-400">
+                                {description}
+                        </div>
+                        <footer class="flex items-end justify-start mt-4 gap-x-4">
+                                {github && (
+                                    <LinkButton href={github}>
+                                        <GitHub class="size-6" />
+                                        GitHub
+                                    </LinkButton>
+                                )}
+                                {link && (
+                                    <LinkButton href={link}>
+                                        <Link class="size-4" />
+                                        Preview
+                                    </LinkButton>
+                                )}
+                            </footer>
+                    </div>
+            </article>
+        ))
+    }
+</div>

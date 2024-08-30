@@ -1,40 +1,52 @@
 ---
-import Badge from '../components/Badge.astro';
-import SocialPill from '../components/SocialPill.astro';
-import LinkedInIcon from '../components/icons/LinkedInIcon.astro';
-import MailIcon from '../components/icons/MailIcon.astro';
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
+
+import AboutMe from "../components/AboutMe.astro";
+import Briefcase from "../components/icons/Briefcase.astro";
+import CodeIcon from "../components/icons/CodeIcon.astro";
+import Experience from "../components/Experience.astro";
+import ProfileCheck from "../components/icons/ProfileCheck.astro";
+import Projects from "../components/Projects.astro";
+import SectionContainer from "../components/SectionContainer.astro";
+import TitleSection from "../components/TitleSection.astro";
+import Introduction from "../components/Introduction.astro";
 ---
 
-<Layout 
-	title="Santiago Preusche | Portfolio"
-	description="Software Engineer">
-	<main>
-		<section class="w-full mx-auto lg:w-[740px] py-44">
-			<h1 class="text-white text-5xl font-bold flex justify-center flex-row gap-x-4">
-				👋 Hey! I'm Santiago <a href="https://www.linkedin.com/in/santiagopreusche/" class="flex justify-center items-center ">
-					<Badge>Open to Work</Badge>
-				</a>
-			</h1>
-			<h2 class="text-white text-2xl opacity-80 flex justify-center flex-row py-2">
-				MSc and Software Engneer from Buenos Aires, Argentina 🇦🇷 living in Europe and ready to dive into the industry.
-			</h2>
-			<h2 class="text-white text-2xl opacity-80 flex justify-center flex-row py-2">
-				With a hands-on experience in the field, I am excited to contribute with all my skills and knowledge to overcome any challenges ahead!
-			</h2>
-			<nav class="flex flex-wrap gap-4 mt-8">
-				<SocialPill href="mailto:santipreusche@gmail.com">
-					<MailIcon class="size-4" />
-					santipreusche@gmail.com
-				</SocialPill>
-				<SocialPill href="https://www.linkedin.com/in/santiagopreusche">
-					<LinkedInIcon class="size-4" />
-					LinkedIn
-				</SocialPill>
-			</nav>
-			
-		</section>
+<Layout
+	title="Santiago Preusche Portfolio - Software Engineer"
+	description="Software Engineer and MSc in software engineering. With multiple years as a software developer in a variety of projects. Mobile apps, websites."
+>
+	<main class="px-4">
+		<SectionContainer id="contact" class="py-16 md:py-36">
+			<Introduction />
+		</SectionContainer>
 	</main>
+	<div class="space-y-24">
+
+		<SectionContainer id="experience">
+			<TitleSection>
+				<Briefcase class="size-8" />
+				Professional Experience
+			</TitleSection>
+			<Experience />
+		</SectionContainer>
+
+		<SectionContainer id="projects">
+			<TitleSection>
+				<CodeIcon class="size-7" />
+				Projects
+			</TitleSection>
+			<Projects />
+		</SectionContainer>
+
+		<SectionContainer id="about-me">
+			<TitleSection>
+				<ProfileCheck class="size-8" />
+				About Me
+			</TitleSection>
+			<AboutMe />
+		</SectionContainer>
+		
+
+	</div>
 </Layout>
-
-
