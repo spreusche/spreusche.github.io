@@ -7,11 +7,6 @@ const TAGS = {
     JAVA: {
         name: "Java",
         class: "bg-[#6F4E37] text-white",
-        
-    },
-    TAILWIND: {
-        name: "Tailwind CSS",
-        class: "bg-[#003159] text-white",   
     },
     SPRING: {
         name: "Spring",
@@ -23,31 +18,31 @@ const TAGS = {
     },
     ANGULAR: {
         name: "Angular",
-        class: "bg-red-800 text-white",    
+        class: "bg-red-800 text-white",
     },
     TYPESCRIPT: {
         name: "Typescript",
-        class: "bg-cyan-600 text-white",    
+        class: "bg-cyan-600 text-white",
     },
     ANDROID: {
         name: "Android",
-        class: "bg-[#266f1d] text-white",    
+        class: "bg-[#266f1d] text-white",
     },
     FIREBASE: {
         name: "Firebase",
-        class: "bg-orange-700 text-white",    
+        class: "bg-orange-700 text-white",
     },
     C: {
         name: "C",
-        class: "bg-[#003159] text-white",   
+        class: "bg-[#003159] text-white",
     },
     PYTHON: {
         name: "Python",
-        class: "bg-[#306998] text-white",    
+        class: "bg-[#306998] text-white",
     },
     YACC: {
         name: "YACC",
-        class: "bg-[#003159] text-white",    
+        class: "bg-[#003159] text-white",
     },
     LEX: {
         name: "LEX",
@@ -75,17 +70,16 @@ const TAGS = {
     },
     VUE: {
         name: "Vue",
-        class: "bg-emerald-600 text-white",    
+        class: "bg-emerald-600 text-white",
     },
     XML: {
         name: "XML",
-        class: "bg-[#003159] text-white",    
+        class: "bg-[#003159] text-white",
     },
-    YAML:{
-        name:"YAML",
-        class:"bg-amber-500 text-white"
-    }
-    
+    YAML: {
+        name: "YAML",
+        class: "bg-amber-500 text-white",
+    },
 };
 const PROJECTS = [
     {
@@ -95,7 +89,13 @@ const PROJECTS = [
         link: "",
         github: "",
         image: "/JobHunters2.webp",
-        tags: [TAGS.JAVA, TAGS.SPRING, TAGS.ANGULAR, TAGS.TYPESCRIPT, TAGS.POSTGRESQL], //TAGS.JAVA, TAGS.TAILWIND
+        tags: [
+            TAGS.JAVA,
+            TAGS.SPRING,
+            TAGS.ANGULAR,
+            TAGS.TYPESCRIPT,
+            TAGS.POSTGRESQL,
+        ],
     },
     {
         title: "Hands-on AI Systems",
@@ -104,7 +104,7 @@ const PROJECTS = [
         link: "",
         github: "https://github.com/spreusche/SIA-TPs",
         image: "neuron.webp",
-        tags: [TAGS.PYTHON], //TAGS.JAVA, TAGS.TAILWIND
+        tags: [TAGS.PYTHON],
     },
     {
         title: "MascotApp - App for Pet Caring",
@@ -121,7 +121,13 @@ const PROJECTS = [
         link: "",
         github: "",
         image: "Social.webp",
-        tags: [TAGS.PYTHON, TAGS.FASTAPI, TAGS.POSTGRESQL, TAGS.NEO4J, TAGS.VUE], //TAGS.JAVA, TAGS.TAILWIND
+        tags: [
+            TAGS.PYTHON,
+            TAGS.FASTAPI,
+            TAGS.POSTGRESQL,
+            TAGS.NEO4J,
+            TAGS.VUE,
+        ],
     },
     {
         title: "CourseAsCode",
@@ -130,7 +136,7 @@ const PROJECTS = [
         link: "",
         github: "https://github.com/spreusche/CourseAsCode",
         image: "/Thesis.webp",
-        tags: [TAGS.PYTHON, TAGS.MOODLE, TAGS.JSON, TAGS.YAML, TAGS.XML], //TAGS.JAVA, TAGS.TAILWIND
+        tags: [TAGS.PYTHON, TAGS.MOODLE, TAGS.JSON, TAGS.YAML, TAGS.XML],
     },
     {
         title: "Steganography encoder/decoder",
@@ -139,7 +145,7 @@ const PROJECTS = [
         link: "",
         github: "https://github.com/spreusche/criptografia-esteganografia",
         image: "/stegano.webp",
-        tags: [TAGS.JAVA], 
+        tags: [TAGS.JAVA],
     },
     {
         title: "Operating System",
@@ -148,7 +154,7 @@ const PROJECTS = [
         link: "",
         github: "https://github.com/spreusche/TP2-SO",
         image: "OS.webp",
-        tags: [TAGS.C, TAGS.ASM], //TAGS.JAVA, TAGS.TAILWIND
+        tags: [TAGS.C, TAGS.ASM],
     },
     {
         title: "SOCKS5 Proxy Server",
@@ -157,7 +163,7 @@ const PROJECTS = [
         link: "",
         github: "https://github.com/spreusche/pdc-tpe-socksv5",
         image: "socks5.webp",
-        tags: [TAGS.C], //TAGS.JAVA, TAGS.TAILWIND
+        tags: [TAGS.C],
     },
     {
         title: "Training App",
@@ -166,61 +172,61 @@ const PROJECTS = [
         link: "",
         github: "",
         image: "qfit.webp",
-        tags: [TAGS.ANDROID, TAGS.JAVA], //TAGS.JAVA, TAGS.TAILWIND
+        tags: [TAGS.ANDROID, TAGS.JAVA],
     },
-    
 ];
 ---
-<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-12 w-full hover:w-full">
+
+<div
+    class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-12 w-full hover:w-full"
+>
     {
         PROJECTS.map(({ image, title, description, tags, link, github }) => (
-        
             <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0 w-full">
-                    <div class="relative w-full s:w-1/2">
-                        <div class=" flex flex-col size-17 items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
-                            <img
-                                alt="Project"
-                                class="object-scale-down object-top size-17 transition duration-500 sm:h-1/2 md:scale-120 md:group-hover:scale-105"
-                                loading="lazy"
-                                src={image}
-                                
-                            />
-                        </div>
-                        <h3 class="text-2xl font-bold text-gray-800 dark:text-gray-100">
-                            {title}
-                        </h3>
-                        <div class="flex flex-wrap mt-2">
-                            <ul class="flex flex-wrap flex-row mb-2 gap-x-2 gap-y-2">
-                                {tags.map((tag) => (
-                                    <li>
-                                        <span
-                                            class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 w-full`}
-                                        >
-                                            
-                                            {tag.name}
-                                        </span>
-                                    </li>
-                                ))}
-                            </ul>
-                        </div>
-                        <div class="mt-2 text-gray-700 dark:text-gray-400">
-                                {description}
-                        </div>
-                        <footer class="flex items-end justify-start mt-4 gap-x-4">
-                                {github && (
-                                    <LinkButton href={github}>
-                                        <GitHub class="size-6" />
-                                        GitHub
-                                    </LinkButton>
-                                )}
-                                {link && (
-                                    <LinkButton href={link}>
-                                        <Link class="size-4" />
-                                        Preview
-                                    </LinkButton>
-                                )}
-                            </footer>
+                <div class="relative w-full s:w-1/2">
+                    <div class="flex flex-col items-center gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-hidden rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50 h-32 w-full">
+                        <img
+                            alt="Project"
+                            class="w-full h-full object-cover transition duration-500 md:group-hover:scale-105"
+                            loading="lazy"
+                            src={image}
+                        />
                     </div>
+
+                    <h3 class="text-2xl font-bold text-gray-800 dark:text-gray-100">
+                        {title}
+                    </h3>
+                    <div class="flex flex-wrap mt-2">
+                        <ul class="flex flex-wrap flex-row mb-2 gap-x-2 gap-y-2">
+                            {tags.map((tag) => (
+                                <li>
+                                    <span
+                                        class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 w-full`}
+                                    >
+                                        {tag.name}
+                                    </span>
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+                    <div class="mt-2 text-gray-700 dark:text-gray-400">
+                        {description}
+                    </div>
+                    <footer class="flex items-end justify-start mt-4 gap-x-4">
+                        {github && (
+                            <LinkButton href={github}>
+                                <GitHub class="size-6" />
+                                GitHub
+                            </LinkButton>
+                        )}
+                        {link && (
+                            <LinkButton href={link}>
+                                <Link class="size-4" />
+                                Preview
+                            </LinkButton>
+                        )}
+                    </footer>
+                </div>
             </article>
         ))
     }
