@@ -1,0 +1,57 @@
+---
+import SkillCard from "./SkillCard.astro"
+import JavaIcon from "./icons/PostgreSQL.astro"
+
+/* Java, Python, , , , , 
+PostgreSQL, MongoDB, Neo4J, ElasticSearch
+Android Development
+Spring and Hibernate familiarity, REST api
+Agile methodologies, SCRUM, Jira */
+const SKILLS = [
+    {
+        name: "Java",
+        icon: JavaIcon
+    },
+    {
+        name: "Python",
+        icon: "IconHolder"
+    },
+    {
+        name: "C#",
+        icon: "IconHolder"
+    },
+    {
+        name: "C",
+        icon: "IconHolder"
+    },
+    {
+        name: "Ruby",
+        icon: "IconHolder"
+    },
+    {
+        name: "Kotlin",
+        icon: "IconHolder"
+    },
+    {
+        name: "Javascript",
+        icon: "IconHolder"
+    },
+    {
+        name: "XML",
+        icon: "IconHolder"
+    },
+    
+]
+---
+
+<div class="grid md:grid-cols-6 lg:grid-cols-8 gap-2">
+    {
+        SKILLS.map(({ name, icon}) => (
+            <div >
+                
+                <SkillCard name={name} />
+                
+            </div>
+        ))
+    }
+</div>

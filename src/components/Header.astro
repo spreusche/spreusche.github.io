@@ -3,6 +3,11 @@ import ThemeToggle from "./ThemeToggle.astro";
 
 const navItems = [
     {
+        title: "Contact",
+        label: "contact",
+        url: "/#contact",
+    },    
+    {
         title: "Experience",
         label: "experience",
         url: "/#experience",
@@ -17,11 +22,8 @@ const navItems = [
         label: "about-me",
         url: "/#about-me",
     },
-    {
-        title: "Contact",
-        label: "contact",
-        url: "/#contact",
-    },
+    
+    
 ];
 ---
 
@@ -42,6 +44,7 @@ const navItems = [
                 </a>
             ))
         }
+        
         <ThemeToggle />
     </nav>
 </header>

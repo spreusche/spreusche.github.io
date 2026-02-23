@@ -10,6 +10,8 @@ import Projects from "../components/Projects.astro";
 import SectionContainer from "../components/SectionContainer.astro";
 import TitleSection from "../components/TitleSection.astro";
 import Introduction from "../components/Introduction.astro";
+import Skills from "../components/Skills.astro";
+import DownloadButton from "../components/DownloadButton.astro";
 ---
 
 <Layout
@@ -22,7 +24,6 @@ import Introduction from "../components/Introduction.astro";
 		</SectionContainer>
 	</main>
 	<div class="space-y-24">
-
 		<SectionContainer id="experience">
 			<TitleSection>
 				<Briefcase class="size-8" />
@@ -46,6 +47,14 @@ import Introduction from "../components/Introduction.astro";
 			</TitleSection>
 			<AboutMe />
 		</SectionContainer>
+
+		<!--<SectionContainer id="skills">
+			<TitleSection>
+				<ProfileCheck class="size-8" />
+				Skills
+			</TitleSection>
+			<Skills />
+		</SectionContainer> -->
 		
 
 	</div>
